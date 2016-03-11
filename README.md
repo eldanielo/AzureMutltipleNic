@@ -1,4 +1,4 @@
-# WindowsServerTestLabARMTemplate
+# Azure Mutliple NIC 
 
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Feldanielo%2FAzureMultipleNic%2Fmaster%2FAzureMutltipleNic%2FTemplates%2Fazuredeploy.json" target="_blank">
