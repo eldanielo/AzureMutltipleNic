@@ -71,11 +71,11 @@
   },
   "variables": {
 
-    "front1": "front1",
-    "back1": "back1",
-    "DC2": "dc2",
-    "back2": "back2",
-    "front2": "front2",
+    "front1": "frontVM1",
+    "front2": "frontVM2",
+    "back1": "backVM1",
+    "back2": "backVM2",
+
 
     "front1IP": "front1",
     "back1IP": "back1",
@@ -88,8 +88,8 @@
 
     "addressPrefixBack": "10.0.0.0/16",
     "addressPrefixFront": "131.107.0.0/24",
-    "subnetNameFront": "Front",
-    "subnetNameBack": "Back",
+    "subnetNameFront": "SubnetFront",
+    "subnetNameBack": "SubnetBack",
 
     "subnetPrefixFront": "131.107.0.0/24",
     "subnetPrefixBack": "10.0.0.0/24",
