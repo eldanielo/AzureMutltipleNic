@@ -613,7 +613,7 @@
               "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('back2'), 'nic2'))]"
             }
           ]
-        },F
+        },
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
