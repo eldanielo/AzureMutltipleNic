@@ -267,6 +267,9 @@
             "properties": {
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[variables('front2privateIP')]",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses/', concat(variables('front2'),'pip'))]"
+              },
               "subnet": {
                 "id": "[variables('subnetRefFront')]"
               }
@@ -608,7 +611,7 @@
               "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('back2'), 'nic2'))]"
             }
           ]
-        },
+        },F
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
