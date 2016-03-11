@@ -94,13 +94,15 @@
     "subnetPrefixFront": "131.107.0.0/24",
     "subnetPrefixBack": "10.0.0.0/24",
 
-    "front1PrivateIP": "131.107.0.5",
-    "front2PrivateIP": "131.107.0.6",
+    "front1PrivateIP": "131.107.0.4",
+    "front2PrivateIP": "131.107.0.5",
 
     "back1nic1PrivateIP": "10.0.0.4",
-    "back1nic2PrivateIP": "10.0.0.5",
-    "back2nic1PrivateIP": "10.0.0.6",
-    "back2nic2PrivateIP": "10.0.0.7",
+    "back2nic1PrivateIP": "10.0.0.5",
+
+    "back1nic2PrivateIP": "131.107.0.6",
+    "back2nic2PrivateIP": "131.107.0.7",
+
 
 
     "vhdStorageType": "Standard_LRS",
@@ -327,7 +329,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[variables('back1nic2privateIP')]",
               "subnet": {
-                "id": "[variables('subnetRefBack')]"
+                "id": "[variables('subnetRefFront')]"
               }
             }
           }
@@ -383,7 +385,7 @@
               "privateIPAllocationMethod": "Static",
               "privateIPAddress": "[variables('back2nic2privateIP')]",
               "subnet": {
-                "id": "[variables('subnetRefBack')]"
+                "id": "[variables('subnetRefFront')]"
               }
             }
           }
