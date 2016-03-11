@@ -71,10 +71,10 @@
   },
   "variables": {
 
-    "front1": "frontVM1",
-    "front2": "frontVM2",
-    "back1": "backVM1",
-    "back2": "backVM2",
+    "front1": "frontvm1",
+    "front2": "frontvm2",
+    "back1": "backvm1",
+    "back2": "backvm2",
 
 
     "front1IP": "front1",

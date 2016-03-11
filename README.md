@@ -1,4 +1,4 @@
-# Azure Mutliple NIC 
+# Azure Multiple NIC 
 
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Feldanielo%2FAzureMutltipleNic%2Fmaster%2FAzureMutltipleNic%2FTemplates%2Fazuredeploy.json" target="_blank">
@@ -8,7 +8,7 @@
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 <p>
-This Template creates is a simpler version of the <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-network-deploy-multinic-arm-template/">MultiNIC deployment template</a>, using only one resource group. 
+This Template is a simpler version of the <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-network-deploy-multinic-arm-template/">MultiNIC deployment template</a>, requiring only one resource group. 
 </p>
 Resources created: </br>
 1 Resource Group for all resources </br>
