@@ -3,7 +3,6 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "defaultValue": "Administrator",
       "type": "string",
       "minLength": 1,
       "metadata": {
@@ -33,9 +32,17 @@
         "description": "VM Size"
       }
     },
-    "vmSizeBack1": {
+    "vmSizeFront2": {
       "type": "string",
       "defaultValue": "Standard_A1",
+      "minLength": 1,
+      "metadata": {
+        "description": "VM Size"
+      }
+    },
+    "vmSizeBack1": {
+      "type": "string",
+      "defaultValue": "Standard_A3",
       "minLength": 1,
       "metadata": {
         "description": "VM Size"
@@ -43,15 +50,7 @@
     },
     "vmSizeBack2": {
       "type": "string",
-      "defaultValue": "Standard_A1",
-      "minLength": 1,
-      "metadata": {
-        "description": "VM Size"
-      }
-    },
-    "vmSizeFront2": {
-      "type": "string",
-      "defaultValue": "Standard_A1",
+      "defaultValue": "Standard_A3",
       "minLength": 1,
       "metadata": {
         "description": "VM Size"
@@ -94,6 +93,15 @@
 
     "subnetPrefixFront": "131.107.0.0/24",
     "subnetPrefixBack": "10.0.0.0/24",
+
+    "front1PrivateIP": "131.107.0.5",
+    "front2PrivateIP": "131.107.0.6",
+
+    "back1nic1PrivateIP": "10.0.0.4",
+    "back1nic2PrivateIP": "10.0.0.5",
+    "back2nic1PrivateIP": "10.0.0.6",
+    "back2nic2PrivateIP": "10.0.0.7",
+
 
     "vhdStorageType": "Standard_LRS",
     "publicIPAddressType": "Dynamic",
@@ -228,7 +236,7 @@
             "name": "[concat(variables('front1'), 'ipconfig')]",
             "properties": {
               "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "131.107.0.5",
+              "privateIPAddress": "[variables('front1privateIP')]",
               "publicIPAddress": {
                 "id": "[resourceId('Microsoft.Network/publicIPAddresses/', concat(variables('front1'),'pip'))]"
               },
@@ -258,7 +266,7 @@
             "name": "[concat(variables('front2'), 'ipconfig')]",
             "properties": {
               "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "131.107.0.6",
+              "privateIPAddress": "[variables('front2privateIP')]",
               "subnet": {
                 "id": "[variables('subnetRefFront')]"
               }
@@ -285,7 +293,7 @@
             "name": "[concat(variables('back1'), 'ipconfig1')]",
             "properties": {
               "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "10.0.0.4",
+              "privateIPAddress": "[variables('back1nic1privateIP')]",
               "publicIPAddress": {
                 "id": "[resourceId('Microsoft.Network/publicIPAddresses/', concat(variables('back1'),'pip'))]"
               },
@@ -314,7 +322,7 @@
             "name": "[concat(variables('back1'), 'ipconfig2')]",
             "properties": {
               "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "10.0.0.4",
+              "privateIPAddress": "[variables('back1nic2privateIP')]",
               "subnet": {
                 "id": "[variables('subnetRefBack')]"
               }
@@ -341,7 +349,7 @@
             "name": "[concat(variables('back2'), 'ipconfig1')]",
             "properties": {
               "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "10.0.0.6",
+              "privateIPAddress": "[variables('back2nic1privateIP')]",
               "publicIPAddress": {
                 "id": "[resourceId('Microsoft.Network/publicIPAddresses/', concat(variables('back2'),'pip'))]"
               },
@@ -370,7 +378,7 @@
             "name": "[concat(variables('back2'), 'ipconfig2')]",
             "properties": {
               "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "10.0.0.4",
+              "privateIPAddress": "[variables('back2nic2privateIP')]",
               "subnet": {
                 "id": "[variables('subnetRefBack')]"
               }
